@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ===== TOP NAV BAR ===== -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <li><a href="#">Legal</a>
+      <ul class="dropdown">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== BOTTOM NAV BAR ===== -->
+<nav class="bottom-nav">
+  <ul>
+    <li><a href="index.html">Home</a>
+    <li><a href="get-started.html">Get Started</a>
+      <ul class="dropdown">
+        <li><a href="get-medicine.html">Get Medicine</a></li>
+        <li><a href="donate-medicine.html">Donate Medicine</a></li>
+        <li><a href="customer-feedback.html">Customer Feedback</a></li>
+      </ul>
+    </li>
+
+    <li><a href="join-volunteer.html">Join Us / Volunteer</a></li>
+
+    <li><a href="#">Outreach</a>
+      <ul class="dropdown">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== WHITE THEME CSS ===== -->
+<style>
+  /* Remove any stray page spacing */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  nav {
+    background: #ffffff;
+    padding: 0.4rem 1.2rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .bottom-nav {
+    border-top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 0.4rem;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background: #f5f5f5;
+  }
+
+  /* Dropdown styling */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown a {
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+  }
+
+  .dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Hover activation */
+  nav ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>  
+  <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f9fffc, #e8fff5);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #20bf55 0%, #01baef 100%);
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            font-size: 60px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: fadeIn 0.5s ease-in-out forwards;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+        }
+
+        .header:hover {
+            background: linear-gradient(135deg, #01baef 0%, #20bf55 100%);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 60px auto;
+            background-color: #fff;
+            box-shadow: 0 15px 35px rgba(32, 191, 85, 0.08);
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(1, 186, 239, 0.15);
+        }
+
+        .section {
+            margin: 0;
+            padding: 40px;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, #20bf55, #01baef);
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #20bf55;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, #20bf55, #01baef);
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            color: #5a6c7d;
+        }
+
+        .form-group {
+            margin-bottom: 28px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #34495e;
+            font-size: 1.05rem;
+        }
+
+        input[type="text"], select, textarea, input[type="file"] {
+            width: calc(100% - 24px);
+            padding: 14px;
+            border: 2px solid #e0f5ea;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            color: #34495e;
+            transition: all 0.3s ease;
+            background-color: #f9fffc;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        input[type="text"]:focus, select:focus, textarea:focus, input[type="file"]:focus {
+            border-color: #20bf55;
+            outline: none;
+            box-shadow: 0 5px 15px rgba(32, 191, 85, 0.1);
+            background-color: #fff;
+        }
+
+        select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2320bf55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 40px;
+        }
+
+        input[type="file"] {
+            padding: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #20bf55 0%, #01baef 100%);
+            color: #fff;
+            padding: 16px 38px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 6px 15px rgba(32, 191, 85, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #01baef 0%, #20bf55 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(1, 186, 239, 0.25);
+        }
+
+        .btn:after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .btn:hover:after {
+            opacity: 1;
+            animation: shine 1.5s forwards;
+        }
+
+        @keyframes shine {
+            0% {
+                transform: scale(0) rotate(45deg);
+                opacity: 0;
+            }
+            80% {
+                transform: scale(2) rotate(45deg);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(2) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        #chatButton, #backToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #20bf55 0%, #01baef 60%);
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #chatButton {
+            right: 30px;
+        }
+
+        #chatButton img, #backToTopBtn img {
+            width: 25px;
+            height: auto;
+            transition: transform 0.3s ease;
+            filter: brightness(0) invert(1);
+        }
+
+        #chatButton:hover, #backToTopBtn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(32, 191, 85, 0.25);
+            background: linear-gradient(135deg, #01baef 0%, #20bf55 60%);
+        }
+
+        #chatButton:hover img, #backToTopBtn:hover img {
+            transform: scale(1.15);
+        }
+
+        #chatPopup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 450px;
+            background-color: #fff;
+            border-radius: 20px;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        #chatFrame {
+            width: 100%;
+            height: calc(100% - 60px);
+            margin-top: 60px;
+            border: none;
+        }
+
+        #chatHeader {
+            background: linear-gradient(135deg, #20bf55 0%, #01baef 100%);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #chatClose {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        #chatClose:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+
+        #backToTopBtn {
+            left: 30px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                font-size: 36px;
+                padding: 80px 0;
+            }
+
+            .container {
+                margin: 40px 20px;
+            }
+
+            .section {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn {
+                font-size: 1.1rem;
+                padding: 14px 28px;
+            }
+
+            #chatPopup {
+                width: calc(100% - 60px);
+                height: 400px;
+                bottom: 20px;
+                right: 20px;
+                left: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                font-size: 28px;
+                padding: 60px 0;
+            }
+
+            #chatButton, #backToTopBtn {
+                width: 50px;
+                height: 50px;
+            }
+
+            #chatButton img, #backToTopBtn img {
+                width: 20px;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        /* Custom styling for the form section */
+        .form-section {
+            background: linear-gradient(135deg, rgba(32, 191, 85, 0.05) 0%, rgba(1, 186, 239, 0.05) 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .language-selector {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 30px;
+        }
+
+        .welcome-message {
+            background-color: rgba(32, 191, 85, 0.08);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 4px solid #20bf55;
+        }
+
+        .welcome-message p {
+            margin: 8px 0;
+            color: #2c3e50;
+        }
+
+        .welcome-message p:first-child {
+            font-weight: 600;
+            color: #20bf55;
+        }
+
+        #formContainer {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: height 0.3s ease;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Apply Now
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Application Form</h2>
+            <form id="applicationForm">
+                <div class="welcome-message">
+                    <p>Get Medicine The Easy Way!</p>
+                    <p>Thank you for choosing to apply to get medicine.</p>
+                    <p>Please take a moment to fill out the following form. You will be paired up with a donor ASAP.</p>
+                    <p>Thank you for your patience!</p>
+                </div>
+                
+                <div class="language-selector">
+                    <label for="language">Select Language:</label>
+                    <select id="language" name="language" onchange="toggleLanguage()">
+                        <option value="choose">Choose Language</option>
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                    </select>
+                </div>
+                
+                <div id="formContainer" style="margin-top: 20px;">
+                    <!-- Google Form will be embedded here based on language selection -->
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Floating Chat Button -->
+    <button id="chatButton">
+        <img src="https://static.wixstatic.com/media/1c1a62_84ddee2229a94620b2659aa3ee74bc11~mv2.png" alt="Chat Icon">
+    </button>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup">
+        <div id="chatHeader">
+            Gift Cure AI Bot
+            <button id="chatClose">X</button>
+        </div>
+        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
+    </div>
+
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+        <img src="https://static.wixstatic.com/media/1c1a62_03467cfdca7245d9aed551c7e8d80d94~mv2.png" alt="Back to top" />
+    </button>
+
+    <script>
+        function toggleLanguage() {
+            const formContainer = document.getElementById('formContainer');
+            const language = document.getElementById('language').value;
+            let formUrl = '';
+            if (language === 'en') {
+                formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd8iP3h_1gsQzBy4MtkruSopUwzY28yAMPcVBH7ITHanP8HxA/viewform?embedded=true';
+                formContainer.style.height = '350px';
+            } else if (language === 'es') {
+                formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSehVXuwkqwUT64GUjWdu7Gav5H5fq4AKXqoNorslt7kaO4mrA/viewform?embedded=true';
+                formContainer.style.height = '350px';
+            } else {
+                formContainer.style.height = '0';
+            }
+            formContainer.innerHTML = `<iframe src="${formUrl}" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
+        }
+
+        var chatButton = document.getElementById('chatButton');
+        var chatPopup = document.getElementById('chatPopup');
+        var isOpen = false;
+
+        chatButton.addEventListener('click', function() {
+            if (!isOpen) {
+                // Open the chat popup
+                chatPopup.style.display = 'block';
+                chatButton.style.display = 'none'; // Hide the chat button
+                isOpen = true;
+            }
+        });
+
+        // Close chat popup when 'Close AI Bot' button is clicked
+        document.getElementById('chatClose').addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+            chatButton.style.display = 'block'; // Show the chat button
+            isOpen = false;
+        });
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            // Get the current scroll position
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Set the scroll interval
+            let scrollInterval = setInterval(function() {
+                // Calculate the new scroll position (smooth scrolling)
+                currentScroll -= 10; // Adjust the value for scrolling speed
+
+                // Scroll to the new position
+                window.scrollTo(0, currentScroll);
+
+                // Stop the interval when reaching the top
+                if (currentScroll <= 0) {
+                    clearInterval(scrollInterval);
+                }
+            }, 10); // Adjust the interval for scrolling smoothness
+        }
+    </script>
+    <div style="height: 100px;"></div>
+</body>
+</html>
