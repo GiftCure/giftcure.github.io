@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Gift Cure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ===== TOP NAV BAR ===== -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <li><a href="#">Legal</a>
+      <ul class="dropdown">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== BOTTOM NAV BAR ===== -->
+<nav class="bottom-nav">
+  <ul>
+    <li><a href="index.html">Home</a>
+    <li><a href="get-started.html">Get Started</a>
+      <ul class="dropdown">
+        <li><a href="get-medicine.html">Get Medicine</a></li>
+        <li><a href="donate-medicine.html">Donate Medicine</a></li>
+        <li><a href="customer-feedback.html">Customer Feedback</a></li>
+      </ul>
+    </li>
+
+    <li><a href="join-volunteer.html">Join Us / Volunteer</a></li>
+
+    <li><a href="#">Outreach</a>
+      <ul class="dropdown">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== WHITE THEME CSS ===== -->
+<style>
+  /* Remove any stray page spacing */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  nav {
+    background: #ffffff;
+    padding: 0.4rem 1.2rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .bottom-nav {
+    border-top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 0.4rem;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background: #f5f5f5;
+  }
+
+  /* Dropdown styling */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown a {
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+  }
+
+  .dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Hover activation */
+  nav ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>  
+  <style>
+        :root {
+            --primary-blue: #2196F3;
+            --primary-green: #4CAF50;
+            --light-blue: #E3F2FD;
+            --light-green: #E8F5E9;
+            --gradient-bg: linear-gradient(135deg, var(--light-blue), var(--light-green));
+            --button-gradient: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--gradient-bg);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: var(--button-gradient);
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="none" width="100" height="100"/><path fill="rgba(255,255,255,0.1)" d="M95.8,0 L0,70 L0,0 L95.8,0 Z"/><path fill="rgba(255,255,255,0.05)" d="M100,0 L0,100 L100,100 L100,0 Z"/></svg>');
+            background-size: 300px;
+            opacity: 0.5;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        .about-us {
+            margin: -50px auto 50px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            max-width: 1000px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .team-section {
+            margin-top: 30px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: var(--button-gradient);
+            border-radius: 3px;
+        }
+
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            width: 100%;
+            max-width: 450px;
+            transform: translateY(0);
+            border-top: 5px solid transparent;
+            border-image: var(--button-gradient);
+            border-image-slice: 1;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-image {
+            position: relative;
+            text-align: center;
+            padding: 30px 0;
+            background: var(--light-blue);
+        }
+
+        .member-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .member-info h2 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .member-role {
+            color: var(--primary-green);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .member-info p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        #chatButton, #backToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        #chatButton {
+            right: 30px;
+            background: var(--button-gradient);
+        }
+
+        #backToTopBtn {
+            left: 30px;
+            display: none;
+            background: white;
+        }
+
+        #chatButton i, #backToTopBtn i {
+            font-size: 24px;
+            color: white;
+            transition: var(--transition);
+        }
+
+        #backToTopBtn i {
+            color: var(--primary-blue);
+        }
+
+        #chatButton:hover, #backToTopBtn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        #chatPopup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: var(--transition);
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        #chatFrame {
+            width: 100%;
+            height: calc(100% - 60px);
+            margin-top: 60px;
+            border: none;
+        }
+
+        #chatHeader {
+            background: var(--button-gradient);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #chatClose {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        #chatClose:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            .team-grid {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                height: 150px;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .about-us {
+                padding: 30px;
+                margin-top: -30px;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            #chatPopup {
+                width: 320px;
+                height: 450px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                height: 120px;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .about-us {
+                padding: 20px;
+                margin-top: -25px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .member-image img {
+                width: 120px;
+                height: 120px;
+            }
+            .member-info h2 {
+                font-size: 1.3rem;
+            }
+            #chatButton, #backToTopBtn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+            }
+            #chatButton {
+                right: 20px;
+            }
+            #backToTopBtn {
+                left: 20px;
+            }
+            #chatPopup {
+                width: 300px;
+                height: 400px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>About Us</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="about-us">
+            <div class="team-section">
+                <h2 class="section-title">Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://st4.depositphotos.com/1000934/21306/i/450/depositphotos_213067824-stock-photo-american-miniature-horse-portrait-close.jpg" alt="Rajalakshmi Sriram">
+                        </div>
+                        <div class="member-info">
+                            <h2>Rajalakshmi Sriram</h2>
+                            <span class="member-role">Co-Founder</span>
+                            <p>Hi! I am a rising junior in CA and I am seeing a growing need for affordable medicine among individuals facing financial constraints. Motivated by my father, who started with this idea, I have created an innovative platform to bridge the gap between those in need of medications and compassionate donors. With the help of my brother, we have successfully published our dream.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://wallpapers.com/images/high/cool-profile-picture-qej7j2ekuor93ss7.webp" alt="Uppilli Sriram">
+                        </div>
+                        <div class="member-info">
+                            <h2>Uppilli Sriram</h2>
+                            <span class="member-role">Co-Founder</span>
+                            <p>Hi, I'm Uppilli Sriram, currently studying at Stanford Online High School in California. To describe me, I am a creative person and am extremely excited when it comes to science and technology. I'm also passionate about helping others, and I believe that everyone should have access to the healthcare they need. That's why I created, or rather designed this website, to make it easier for people to donate medicines to those who may not be able to afford them.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button id="chatButton">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup">
+        <div id="chatHeader">
+            Gift Cure AI Bot
+            <button id="chatClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Go to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        var chatButton = document.getElementById('chatButton');
+        var chatPopup = document.getElementById('chatPopup');
+        var isOpen = false;
+
+        chatButton.addEventListener('click', function() {
+            if (!isOpen) {
+                chatPopup.style.display = 'block';
+                chatButton.style.display = 'none';
+                isOpen = true;
+            }
+        });
+
+        document.getElementById('chatClose').addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+            chatButton.style.display = 'block';
+            isOpen = false;
+        });
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            // Get the current scroll position
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Set the scroll interval
+            let scrollInterval = setInterval(function() {
+                // Calculate the new scroll position (smooth scrolling)
+                currentScroll -= 10; // Adjust the value for scrolling speed
+                
+                // Scroll to the new position
+                window.scrollTo(0, currentScroll);
+
+                // Stop the interval when reaching the top
+                if (currentScroll <= 0) {
+                    clearInterval(scrollInterval);
+                }
+            }, 10); // Adjust the interval for scrolling smoothness
+        }
+
+        document.getElementById("backToTopBtn").addEventListener("click", topFunction);
+    </script>
+</body>
+</html>
