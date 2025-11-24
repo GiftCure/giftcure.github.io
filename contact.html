@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Gift Cure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- ===== TOP NAV BAR ===== -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <li><a href="#">Legal</a>
+      <ul class="dropdown">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== BOTTOM NAV BAR ===== -->
+<nav class="bottom-nav">
+  <ul>
+    <li><a href="index.html">Home</a>
+    <li><a href="get-started.html">Get Started</a>
+      <ul class="dropdown">
+        <li><a href="get-medicine.html">Get Medicine</a></li>
+        <li><a href="donate-medicine.html">Donate Medicine</a></li>
+        <li><a href="customer-feedback.html">Customer Feedback</a></li>
+      </ul>
+    </li>
+
+    <li><a href="join-volunteer.html">Join Us / Volunteer</a></li>
+
+    <li><a href="#">Outreach</a>
+      <ul class="dropdown">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== WHITE THEME CSS ===== -->
+<style>
+  /* Remove any stray page spacing */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  nav {
+    background: #ffffff;
+    padding: 0.4rem 1.2rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .bottom-nav {
+    border-top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 0.4rem;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background: #f5f5f5;
+  }
+
+  /* Dropdown styling */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown a {
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+  }
+
+  .dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Hover activation */
+  nav ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>    
+<style>
+        :root {
+            --primary-color: #4ECDC4;
+            --secondary-color: #2A93D5;
+            --accent-color: #56CF9E;
+            --light-color: #F7FFF7;
+            --dark-color: #1A535C;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafb;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: var(--gradient);
+            position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf') no-repeat center;
+            background-size: cover;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .header-title {
+            font-size: 3rem;
+            color: white;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out 0.5s both;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-section {
+            margin: -60px auto 60px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        
+        .contact-info {
+            padding: 50px;
+            background: linear-gradient(135deg, rgba(78, 205, 196, 0.05), rgba(42, 147, 213, 0.05));
+        }
+        
+        .contact-methods {
+            margin-bottom: 40px;
+        }
+        
+        .contact-title {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 500;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 5px 15px rgba(42, 147, 213, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(42, 147, 213, 0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #56CF9E, #4ECDC4);
+            color: white;
+            box-shadow: 0 5px 15px rgba(86, 207, 158, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(86, 207, 158, 0.4);
+        }
+
+        .social-title {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .social-icon img {
+            width: 24px;
+            height: 24px;
+            border-radius: 0;
+            object-fit: contain;
+        }
+        
+        .contact-form {
+            padding: 50px;
+        }
+        
+        .form-title {
+            font-size: 1.8rem;
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e8eef3;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            color: #333;
+            background-color: #f9fbfc;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(42, 147, 213, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(42, 147, 213, 0.4);
+        }
+
+        #chatButton, #backToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        #chatButton {
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        #backToTopBtn {
+            left: 30px;
+            display: none;
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+        }
+
+        #chatButton img, #backToTopBtn img {
+            width: 24px;
+            height: auto;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        #chatButton:hover, #backToTopBtn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        #chatPopup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background-color: white;
+            border-radius: 20px;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        #chatFrame {
+            width: 100%;
+            height: calc(100% - 70px);
+            margin-top: 70px;
+            border: none;
+        }
+
+        #chatHeader {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        #chatClose {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #chatClose:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+
+        .info-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        
+        .info-card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .info-card a:hover {
+            color: var(--primary-color);
+        }
+        
+        .icon {
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-info, .contact-form {
+                padding: 30px;
+            }
+            
+            .header {
+                height: 250px;
+            }
+            
+            .header-title {
+                font-size: 2rem;
+            }
+            
+            .header-subtitle {
+                font-size: 1rem;
+            }
+            
+            .contact-title, .form-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .header {
+                height: 200px;
+            }
+            
+            .header-title {
+                font-size: 1.8rem;
+            }
+            
+            #chatPopup {
+                width: 90%;
+                right: 5%;
+                left: 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Get In Touch</h1>
+            <p class="header-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="contact-section">
+            <div class="contact-card">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-methods">
+                            <h2 class="contact-title">Contact Us</h2>
+                            <div class="info-card">
+                                <h3><i class="fas fa-map-marker-alt icon"></i> Our Location</h3>
+                                <p>Gift Cure Organization</p>
+                                <p>Building connections worldwide</p>
+                            </div>
+                            <div class="info-card">
+                                <h3><i class="fas fa-envelope icon"></i> Email Us</h3>
+                                <p><a href="mailto:support@giftcure.org">support@giftcure.org</a></p>
+                            </div>
+                            <div class="info-card">
+                                <h3><i class="fas fa-phone-alt icon"></i> Call Us</h3>
+                                <p><a href="tel:+16692916331">+1 (669) 291-6331</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-buttons">
+                            <button class="btn btn-primary" onclick="window.open('mailto:support@giftcure.org?cc=uppillisriram@giftcure.org,rajalakshmisriram@giftcure.org&subject=Help Request', '_blank')">
+                                <i class="fas fa-envelope"></i> Email Support
+                            </button>
+                            <button class="btn btn-secondary" onclick="window.open('tel:+16692916331', '_blank')">
+                                <i class="fas fa-phone-alt"></i> Call Us
+                            </button>
+                        </div>
+
+                        <div class="social-connect">
+                            <h3 class="social-title">Connect With Us</h3>
+                            <div class="social-icons">
+                                <a href="https://discord.giftcure.org" target="_blank" class="social-icon" title="Discord">
+                                    <i class="fab fa-discord" style="color: #5865F2; font-size: 22px;"></i>
+                                </a>
+                                <a href="https://join.skype.com/invite/bDIrhLmsZ89C" target="_blank" class="social-icon" title="Skype">
+                                    <i class="fab fa-skype" style="color: #00AFF0; font-size: 22px;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/gift-cure/" target="_blank" class="social-icon" title="LinkedIn">
+                                    <i class="fab fa-linkedin-in" style="color: #0A66C2; font-size: 22px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h2 class="form-title">Send Us a Message</h2>
+                        <form id="contactForm" onsubmit="submitForm(event)">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="What is this regarding?" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" name="message" placeholder="How can we help you?" rows="4" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button id="chatButton">
+        <i class="fas fa-comment-dots" style="font-size: 24px; color: white;"></i>
+    </button>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup">
+        <div id="chatHeader">
+            Gift Cure AI Assistant
+            <button id="chatClose">✕</button>
+        </div>
+        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Go to top">
+        <i class="fas fa-arrow-up" style="font-size: 20px; color: white;"></i>
+    </button>
+
+    <!-- Font Awesome Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    
+    <script>
+        var chatButton = document.getElementById('chatButton');
+        var chatPopup = document.getElementById('chatPopup');
+        var isOpen = false;
+
+        chatButton.addEventListener('click', function() {
+            if (!isOpen) {
+                chatPopup.style.display = 'block';
+                chatButton.style.display = 'none';
+                isOpen = true;
+            }
+        });
+
+        document.getElementById('chatClose').addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+            chatButton.style.display = 'flex';
+            isOpen = false;
+        });
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "flex";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            let scrollInterval = setInterval(function() {
+                currentScroll -= 20;
+                window.scrollTo(0, currentScroll);
+                if (currentScroll <= 0) {
+                    clearInterval(scrollInterval);
+                }
+            }, 10);
+        }
+
+        document.getElementById("backToTopBtn").addEventListener("click", topFunction);
+
+        function submitForm(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            var mailtoLink = 'mailto:support@giftcure.org?cc=rajalakshmisriram@giftcure.org,uppillisriram@giftcure.org&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message) + '%0D%0A%0D%0AFrom: ' + encodeURIComponent(name) + ' (' + encodeURIComponent(email) + ')';
+            window.open(mailtoLink, '_blank');
+        }
+    </script>
+</body>
+</html>
