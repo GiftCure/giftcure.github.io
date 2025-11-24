@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - Gift Cure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  <!-- ===== TOP NAV BAR ===== -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <li><a href="#">Legal</a>
+      <ul class="dropdown">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== BOTTOM NAV BAR ===== -->
+<nav class="bottom-nav">
+  <ul>
+    <li><a href="index.html">Home</a>
+    <li><a href="get-started.html">Get Started</a>
+      <ul class="dropdown">
+        <li><a href="get-medicine.html">Get Medicine</a></li>
+        <li><a href="donate-medicine.html">Donate Medicine</a></li>
+        <li><a href="customer-feedback.html">Customer Feedback</a></li>
+      </ul>
+    </li>
+
+    <li><a href="join-volunteer.html">Join Us / Volunteer</a></li>
+
+    <li><a href="#">Outreach</a>
+      <ul class="dropdown">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== WHITE THEME CSS ===== -->
+<style>
+  /* Remove any stray page spacing */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  nav {
+    background: #ffffff;
+    padding: 0.4rem 1.2rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .bottom-nav {
+    border-top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 0.4rem;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background: #f5f5f5;
+  }
+
+  /* Dropdown styling */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown a {
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+  }
+
+  .dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Hover activation */
+  nav ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>  
+  <style>
+        :root {
+            --primary-blue: #1976D2;
+            --secondary-blue: #0D47A1;
+            --primary-green: #388E3C;
+            --secondary-green: #1B5E20;
+            --light-green: #E8F5E9;
+            --light-blue: #E3F2FD;
+            --gradient-blue: linear-gradient(135deg, #1E88E5, #0D47A1);
+            --gradient-green: linear-gradient(135deg, #43A047, #1B5E20);
+            --gradient-mix: linear-gradient(135deg, #1E88E5, #43A047);
+            --text-dark: #263238;
+            --text-light: #FFFFFF;
+            --text-body: #37474F;
+            --bg-light: #F5F5F5;
+            --transition: all 0.3s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            position: relative;
+            background: var(--gradient-blue);
+            padding: 120px 0 140px;
+            text-align: center;
+            color: var(--text-light);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://as2.ftcdn.net/v2/jpg/03/27/23/59/1000_F_327235996_x4T4FH14gnJ0AFZ9Dsj64cHwPKc8mOWa.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .header-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.5s;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: -80px auto 60px;
+            background: var(--text-light);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            padding: 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--secondary-blue);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-mix);
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-body);
+            line-height: 1.8;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--gradient-green);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Donation Frame */
+        .donation-container {
+            margin: 40px auto;
+            max-width: 382px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .donation-container iframe {
+            width: 100%;
+            height: 550px;
+            border: none;
+        }
+
+        /* Volunteer Section */
+        .volunteer-section {
+            background: var(--gradient-green);
+            color: var(--text-light);
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .volunteer-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://png.pngtree.com/thumb_back/fh260/background/20210828/pngtree-rectangle-diagonal-cut-white-lines-yellow-background-image_765017.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: 1;
+        }
+
+        .volunteer-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .volunteer-section h2 {
+            color: var(--text-light);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .volunteer-section h2::after {
+            background: var(--text-light);
+        }
+
+        .volunteer-section .btn {
+            background: var(--gradient-blue);
+            box-shadow: 0 4px 15px rgba(33, 150, 243, 0.4);
+        }
+
+        .volunteer-section .btn:hover {
+            box-shadow: 0 8px 25px rgba(33, 150, 243, 0.5);
+        }
+
+        /* Chat Button */
+        #chatButton, #backToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-blue);
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        #chatButton {
+            right: 30px;
+            background: var(--gradient-blue);
+        }
+
+        #backToTopBtn {
+            left: 30px;
+            background: var(--gradient-green);
+            display: none;
+        }
+
+        #chatButton:hover, #backToTopBtn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #chatButton img, #backToTopBtn img {
+            width: 30px;
+            height: 30px;
+            transition: var(--transition);
+            filter: brightness(0) invert(1);
+        }
+
+        /* Chat Popup */
+        #chatPopup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: var(--text-light);
+            border-radius: 12px;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        #chatHeader {
+            background: var(--gradient-blue);
+            color: var(--text-light);
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+        }
+
+        #chatClose {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--text-light);
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        #chatClose:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: scale(1.1);
+        }
+
+        #chatFrame {
+            width: 100%;
+            height: calc(100% - 50px);
+            margin-top: 50px;
+            border: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header {
+                padding: 80px 0 100px;
+            }
+            
+            .header-title {
+                font-size: 2.5rem;
+            }
+            
+            .header-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 30px 20px;
+                margin: -60px 15px 40px;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+            
+            .volunteer-section {
+                padding: 60px 0;
+                margin-top: 60px;
+            }
+            
+            .volunteer-section h2 {
+                font-size: 2rem;
+            }
+            
+            #chatButton, #backToTopBtn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+            }
+            
+            #chatButton {
+                right: 20px;
+            }
+            
+            #backToTopBtn {
+                left: 20px;
+            }
+            
+            #chatPopup {
+                width: 300px;
+                height: 450px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            #chatButton img, #backToTopBtn img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 60px 0 80px;
+            }
+            
+            .header-title {
+                font-size: 2rem;
+            }
+            
+            .header-subtitle {
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+                margin: -50px 10px 30px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            p {
+                font-size: 0.95rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .volunteer-section {
+                padding: 50px 0;
+                margin-top: 40px;
+            }
+            
+            .volunteer-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            #chatButton, #backToTopBtn {
+                width: 45px;
+                height: 45px;
+                bottom: 15px;
+            }
+            
+            #chatButton {
+                right: 15px;
+            }
+            
+            #backToTopBtn {
+                left: 15px;
+            }
+            
+            #chatPopup {
+                width: 280px;
+                height: 400px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            #chatButton img, #backToTopBtn img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Join Us</h1>
+            <p class="header-subtitle">Explore our community and make a difference!</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Why Join Us?</h2>
+            <p>You can help support our mission by contributing to our cause. Together, we can make a significant difference in our society. Your support, whether through donations or participation, is essential in improving the lives of those who need it most. Let's unite our efforts to create a lasting impact on our community.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Volunteer with Gift Cure</h2>
+            <p>If you are interested in volunteering, you can join our team and volunteer for various activities. Additionally, you can request hours for the volunteering you do. In our Discord server, we have provided links to join our volunteer database and self-report your hours. If any paperwork needs to be signed for hours, you can upload it through the volunteer database form link in our Discord group.</p>
+            
+            <div class="donation-container">
+                <iframe
+                    src="https://www.paypal.com/giving/campaigns?campaign_id=244GSRMGN3A84"
+                    title="PayPal donate campaign card"
+                    scrolling="no"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Volunteer Section -->
+    <div class="volunteer-section">
+        <div class="volunteer-container">
+            <h2>Join Our Volunteer Team</h2>
+            <p>Become part of our dedicated volunteer community and help make a difference in people's lives.</p>
+            <a href="https://discord.giftcure.org" class="btn" target="_blank">
+                Join our Discord Now!
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button id="chatButton">
+        <img src="https://static.wixstatic.com/media/1c1a62_84ddee2229a94620b2659aa3ee74bc11~mv2.png" alt="Chat Icon">
+    </button>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup">
+        <div id="chatHeader">
+            Gift Cure AI Bot
+            <button id="chatClose">X</button>
+        </div>
+        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Go to top">
+        <img src="https://static.wixstatic.com/media/1c1a62_03467cfdca7245d9aed551c7e8d80d94~mv2.png" alt="Back to top">
+    </button>
+
+    <script>
+        // Floating chat button functionality
+        var chatButton = document.getElementById('chatButton');
+        var chatPopup = document.getElementById('chatPopup');
+        var isOpen = false;
+
+        chatButton.addEventListener('click', function() {
+            if (!isOpen) {
+                // Open the chat popup
+                chatPopup.style.display = 'block';
+                chatButton.style.display = 'none'; // Hide the chat button
+                isOpen = true;
+            }
+        });
+
+        // Close chat popup when 'Close AI Bot' button is clicked
+        document.getElementById('chatClose').addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+            chatButton.style.display = 'block'; // Show the chat button
+            isOpen = false;
+        });
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            // Get the current scroll position
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            // Set the scroll interval
+            let scrollInterval = setInterval(function() {
+                // Calculate the new scroll position (smooth scrolling)
+                currentScroll -= 20; // Adjusted for smoother scrolling
+                
+                // Scroll to the new position
+                window.scrollTo(0, currentScroll);
+                // Stop the interval when reaching the top
+                if (currentScroll <= 0) {
+                    clearInterval(scrollInterval);
+                }
+            }, 10); // Adjusted for smoother scrolling
+        }
+
+        // Attach the topFunction to the back to top button
+        document.getElementById("backToTopBtn").addEventListener("click", topFunction);
+    </script>
+</body>
+</html>
