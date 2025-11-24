@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- ===== TOP NAV BAR ===== -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <li><a href="#">Legal</a>
+      <ul class="dropdown">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== BOTTOM NAV BAR ===== -->
+<nav class="bottom-nav">
+  <ul>
+    <li><a href="index.html">Home</a>
+    <li><a href="get-started.html">Get Started</a>
+      <ul class="dropdown">
+        <li><a href="get-medicine.html">Get Medicine</a></li>
+        <li><a href="donate-medicine.html">Donate Medicine</a></li>
+        <li><a href="customer-feedback.html">Customer Feedback</a></li>
+      </ul>
+    </li>
+
+    <li><a href="join-volunteer.html">Join Us / Volunteer</a></li>
+
+    <li><a href="#">Outreach</a>
+      <ul class="dropdown">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== WHITE THEME CSS ===== -->
+<style>
+  /* Remove any stray page spacing */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  nav {
+    background: #ffffff;
+    padding: 0.4rem 1.2rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .bottom-nav {
+    border-top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 0.4rem;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background: #f5f5f5;
+  }
+
+  /* Dropdown styling */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown a {
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+  }
+
+  .dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Hover activation */
+  nav ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>  
+  <style>
+        :root {
+            --primary-color: #2EC4B6;
+            --secondary-color: #3498DB;
+            --accent-color: #20E3B2;
+            --light-color: #E9FCFA;
+            --dark-color: #184e77;
+            --text-color: #2C3E50;
+            --light-text: #FFFFFF;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fffd;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: var(--gradient);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 100px 0;
+            color: var(--light-text);
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            animation: fadeIn 1.5s;
+            box-shadow: var(--shadow);
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSgzMCkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==') center center;
+            opacity: 0.6;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .search-container {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 700px;
+            position: relative;
+        }
+        
+        .search-container input {
+            padding: 16px 20px;
+            width: 100%;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+            background-color: white;
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .search-container input:focus {
+            outline: none;
+            box-shadow: 0 4px 20px rgba(46, 196, 182, 0.3);
+        }
+        
+        .search-container input::placeholder {
+            color: #9e9e9e;
+        }
+        
+        #faqResults {
+            text-align: center;
+            color: var(--text-color);
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        
+        .faq-section {
+            padding: 40px;
+            background-color: white;
+            max-width: 1100px;
+            box-shadow: var(--shadow);
+            margin: 20px auto 60px;
+            border-radius: 16px;
+        }
+        
+        .faq-group {
+            margin-bottom: 50px;
+        }
+        
+        .faq-group h2 {
+            font-size: 28px;
+            color: var(--dark-color);
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .faq-group h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        .faq-box {
+            background-color: white;
+            border-radius: 12px;
+            padding: 0;
+            margin-bottom: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border-left: 4px solid transparent;
+        }
+        
+        .faq-box:hover {
+            box-shadow: 0 6px 16px rgba(46, 196, 182, 0.15);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .faq-question {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 17px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer {
+            display: none;
+            padding: 0 25px 22px;
+            line-height: 1.8;
+            font-size: 15px;
+            color: #5a6a7e;
+            border-top: 1px solid #f0f0f0;
+            margin-top: -10px;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-answer.show {
+            display: block;
+            animation: fadeDown 0.5s ease;
+        }
+        
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .faq-answer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .faq-answer a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+        
+        .toggle-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.4s ease;
+            filter: invert(60%);
+        }
+        
+        .toggle-icon.open {
+            transform: rotate(180deg);
+            filter: invert(60%) sepia(80%) saturate(500%) hue-rotate(130deg);
+        }
+        
+        #chatButton, #backToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient);
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(46, 196, 182, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(46, 196, 182, 0.5); }
+            70% { box-shadow: 0 0 0 10px rgba(46, 196, 182, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(46, 196, 182, 0); }
+        }
+        
+        #chatButton {
+            right: 30px;
+        }
+        
+        #chatButton img, #backToTopBtn img {
+            width: 28px;
+            height: auto;
+            transition: transform 0.3s ease;
+            filter: brightness(0) invert(1);
+        }
+        
+        #chatButton:hover, #backToTopBtn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(46, 196, 182, 0.5);
+        }
+        
+        #chatButton:hover img, #backToTopBtn:hover img {
+            transform: scale(1.1);
+        }
+        
+        #chatPopup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background-color: white;
+            border-radius: 16px;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+        
+        #chatFrame {
+            width: 100%;
+            height: calc(100% - 60px);
+            margin-top: 60px;
+            border: none;
+        }
+        
+        #chatHeader {
+            background: var(--gradient);
+            color: white;
+            padding: 18px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+        
+        #chatClose {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        #chatClose:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+        
+        #backToTopBtn {
+            left: 30px;
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                font-size: 36px;
+                padding: 70px 0;
+            }
+            
+            .faq-section {
+                padding: 30px 20px;
+                margin: 20px 15px 40px;
+            }
+            
+            .search-container {
+                margin: 30px 15px;
+            }
+            
+            #chatPopup {
+                width: calc(100% - 40px);
+                height: 450px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                font-size: 28px;
+                padding: 50px 0;
+            }
+            
+            .faq-group h2 {
+                font-size: 22px;
+            }
+            
+            .faq-question {
+                font-size: 16px;
+                padding: 18px 20px;
+            }
+            
+            .faq-answer {
+                font-size: 14px;
+                padding: 0 20px 18px;
+            }
+            
+            #chatButton, #backToTopBtn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+            }
+            
+            #chatButton img, #backToTopBtn img {
+                width: 22px;
+            }
+            
+            #chatButton {
+                right: 20px;
+            }
+            
+            #backToTopBtn {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            FAQs
+        </div>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Search FAQs...">
+    </div>
+    
+    <div id="faqResults"></div>
+    
+    <div class="faq-section">
+        <div class="faq-group">
+            <h2>Getting Financial Aid for Medicine</h2>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    I still haven't gotten financial aid. When will I receive it?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    Sorry about that. You will receive it as soon as we get the necessary amount of donations. We may currently be short on donations. If financial aid is urgent, please contact <a href="mailto:support@giftcure.org">support@giftcure.org</a> and we will look into what we can do.
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    How do I withdraw my request for financial aid?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    Just shoot us an email to <a href="mailto:support@giftcure.org">support@giftcure.org</a>. We'll take care of it.
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    What if I need nonprescription medication? How do I apply for financial aid?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    Sorry, we do not provide financial aid for nonprescription medication for the sole reason that we can't confirm if the money is actually used for buying medications.
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    Who is eligible for medication assistance from Gift Cure?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    To be eligible, patients must have a valid prescription and a valid P2P account for receiving funds. Also the recipient must be under 18, but the one who fills out the application must be above 18. Exceptions to this eligibility criteria may be given if email is sent to <a href="mailto:support@giftcure.org">support@giftcure.org</a>.
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    Are there any income restrictions to qualify?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    We don't list specific income restrictions. However, Gift Cure prioritizes assisting those with the greatest financial need.
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    How long does it take to process an application?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    Processing times can vary, but we strive to review applications as quickly as possible. You will receive updates on the status of your application via email.
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    What if I don't have a P2P account?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    Please contact us at <a href="mailto:support@giftcure.org">support@giftcure.org</a> and we will figure something out.
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-group">
+            <h2>Donating Money / Volunteering</h2>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    What is the minimum amount of money I can donate?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    A minimum of $5 will be helpful. If you can provide more than that, please do!
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    Can I donate in someone else's name?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    Yes, you can donate in honor or memory of someone special. Please let us know during the donation process.
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    How can I volunteer with Gift Cure?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    We have a variety of volunteer opportunities available! You can learn more about volunteering on our website or by joining our Discord server (discord.giftcure.org).
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    Do I need any specific skills to volunteer?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    We value all skillsets! Whether you have experience in fundraising, finance, translation, or simply want to lend a helping hand, we have a place for you.
+                </div>
+            </div>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    Can I join a volunteer board?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    Yes, Gift Cure is powered by dedicated volunteers who lead our various boards. Please visit our Discord server (discord.giftcure.org) for more information about board opportunities.
+                </div>
+            </div>
+        </div>
+        
+        <div class="faq-group">
+            <h2>More Questions?</h2>
+            
+            <div class="faq-box">
+                <div class="faq-question">
+                    What if I have a question not on this list?
+                    <img class="toggle-icon" src="https://img.icons8.com/ios-glyphs/30/000000/expand-arrow.png" alt="Toggle Icon">
+                </div>
+                <div class="faq-answer">
+                    Ask our AI chatbot or contact us at <a href="mailto:support@giftcure.org">support@giftcure.org</a>. We love questions as it helps us develop our AI bot and our FAQ page!
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating Chat Button -->
+    <button id="chatButton">
+        <img src="https://img.icons8.com/ios/50/ffffff/chat--v1.png" alt="Chat Icon">
+    </button>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup">
+        <div id="chatHeader">
+            Gift Cure AI Bot
+            <button id="chatClose">×</button>
+        </div>
+        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
+    </div>
+
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+        <img src="https://img.icons8.com/ios/50/ffffff/up--v1.png" alt="Back to top" />
+    </button>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('show');
+                const icon = question.querySelector('.toggle-icon');
+                icon.classList.toggle('open');
+            });
+        });
+        
+        var chatButton = document.getElementById('chatButton');
+        var chatPopup = document.getElementById('chatPopup');
+        var isOpen = false;
+        
+        chatButton.addEventListener('click', function() {
+            if (!isOpen) {
+                chatPopup.style.display = 'block';
+                chatButton.style.display = 'none';
+                isOpen = true;
+            }
+        });
+        
+        document.getElementById('chatClose').addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+            chatButton.style.display = 'block';
+            isOpen = false;
+        });
+        
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+        
+        function topFunction() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            let scrollInterval = setInterval(function() {
+                currentScroll -= 20;
+                window.scrollTo(0, currentScroll);
+                if (currentScroll <= 0) {
+                    clearInterval(scrollInterval);
+                }
+            }, 10);
+        }
+        
+        const searchBar = document.getElementById('searchBar');
+        const faqs = document.querySelectorAll('.faq-box');
+        const faqResults = document.getElementById('faqResults');
+        
+        searchBar.addEventListener('input', () => {
+            const query = searchBar.value.toLowerCase().trim();
+            let found = false;
+            
+            faqs.forEach(faq => {
+                const question = faq.querySelector('.faq-question').textContent.toLowerCase();
+                if (question.includes(query)) {
+                    faq.style.display = 'block';
+                    found = true;
+                } else {
+                    faq.style.display = 'none';
+                }
+            });
+            
+            faqResults.textContent = found ? '' : 'No results found, please ask AI chat.';
+        });
+    </script>
+</body>
+</html>
