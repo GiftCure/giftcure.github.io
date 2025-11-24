@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media | Gift Cure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- ===== TOP NAV BAR ===== -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <li><a href="#">Legal</a>
+      <ul class="dropdown">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== BOTTOM NAV BAR ===== -->
+<nav class="bottom-nav">
+  <ul>
+    <li><a href="index.html">Home</a>
+    <li><a href="get-started.html">Get Started</a>
+      <ul class="dropdown">
+        <li><a href="get-medicine.html">Get Medicine</a></li>
+        <li><a href="donate-medicine.html">Donate Medicine</a></li>
+        <li><a href="customer-feedback.html">Customer Feedback</a></li>
+      </ul>
+    </li>
+
+    <li><a href="join-volunteer.html">Join Us / Volunteer</a></li>
+
+    <li><a href="#">Outreach</a>
+      <ul class="dropdown">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== WHITE THEME CSS ===== -->
+<style>
+  /* Remove any stray page spacing */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  nav {
+    background: #ffffff;
+    padding: 0.4rem 1.2rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .bottom-nav {
+    border-top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 0.4rem;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background: #f5f5f5;
+  }
+
+  /* Dropdown styling */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown a {
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+  }
+
+  .dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Hover activation */
+  nav ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>    
+<style>
+        :root {
+            --primary-blue: #2b87d9;
+            --primary-green: #4caf96;
+            --light-green: #e8f5f0;
+            --dark-blue: #1c5b8e;
+            --accent-blue: #7fb9e6;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #495057;
+            --white: #ffffff;
+            --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+            --transition-fast: all 0.2s ease;
+            --transition-med: all 0.3s ease;
+            --transition-slow: all 0.5s ease;
+            --border-radius-sm: 6px;
+            --border-radius-md: 12px;
+            --border-radius-lg: 20px;
+            --border-radius-xl: 30px;
+            --border-radius-full: 50%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styling */
+        .header {
+            background: var(--gradient-primary);
+            padding: 40px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://static.wixstatic.com/media/1c1a62_9191ed22d2074f798f6c9ec6baf6ce50~mv2.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .header h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .header h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--white);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Banner Section */
+        .banner {
+            padding: 60px 0;
+            background-color: var(--light-green);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 30%, var(--primary-green) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 10px 0;
+            flex-wrap: wrap;
+        }
+
+        .logo, .logo2, .logo3, .logo4, .logo5, .gif {
+            width: 270px;
+            height: auto;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-med);
+            cursor: pointer;
+            transform: translateY(0);
+        }
+
+        .logo:hover, .logo2:hover, .logo3:hover, .logo4:hover, .logo5:hover, .gif:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Media Container */
+        .media-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .media-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            width: 100%;
+            max-width: 550px;
+            transition: var(--transition-med);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .media-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .media-card iframe {
+            width: 100%;
+            height: 320px;
+            border: none;
+            margin: 0 auto;
+            border-top-left-radius: var(--border-radius-lg);
+            border-top-right-radius: var(--border-radius-lg);
+        }
+
+        .media-card-content {
+            padding: 24px;
+            text-align: left;
+            background: var(--white);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .media-card-content h3 {
+            margin: 0 0 16px;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+            line-height: 1.3;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .media-card-content h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-green);
+            border-radius: 1.5px;
+        }
+
+        .media-card-content p {
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+            margin: 0 0 20px;
+            line-height: 1.7;
+            flex-grow: 1;
+        }
+
+        .media-card-content ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .media-card-content li {
+            margin-bottom: 8px;
+            position: relative;
+            list-style: none;
+            padding-left: 24px;
+        }
+
+        .media-card-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .media-card-content a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--gradient-primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: var(--border-radius-md);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: var(--transition-fast);
+            box-shadow: var(--shadow-sm);
+            align-self: flex-start;
+        }
+
+        .media-card-content a:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Floating Buttons */
+        #chatButton, #backToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: var(--border-radius-full);
+            background: var(--gradient-primary);
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition-med);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        #chatButton {
+            right: 30px;
+        }
+
+        #backToTopBtn {
+            left: 30px;
+            display: none;
+        }
+
+        #chatButton img, #backToTopBtn img {
+            width: 30px;
+            height: auto;
+            transition: var(--transition-med);
+            filter: brightness(0) invert(1);
+        }
+
+        #chatButton:hover, #backToTopBtn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        #chatButton:hover img, #backToTopBtn:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Chat Popup */
+        #chatPopup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 450px;
+            background-color: var(--white);
+            border-radius: var(--border-radius-lg);
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            transition: var(--transition-med);
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        #chatFrame {
+            width: 100%;
+            height: calc(100% - 60px);
+            margin-top: 60px;
+            border: none;
+        }
+
+        #chatHeader {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 16px 20px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            border-top-left-radius: var(--border-radius-lg);
+            border-top-right-radius: var(--border-radius-lg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #chatClose {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: var(--border-radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: var(--transition-fast);
+        }
+
+        #chatClose:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+
+        #chatClose:focus {
+            outline: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .header h1 {
+                font-size: 3rem;
+            }
+            .media-card {
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            .media-card-content h3 {
+                font-size: 1.5rem;
+            }
+            .logo, .logo2, .logo3, .logo4, .logo5, .gif {
+                width: 200px;
+            }
+            .media-card iframe {
+                height: 280px;
+            }
+            #chatPopup {
+                width: calc(100% - 60px);
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .logo, .logo2, .logo3, .logo4, .logo5, .gif {
+                width: 150px;
+            }
+            .media-card iframe {
+                height: 240px;
+            }
+            .media-card-content {
+                padding: 20px;
+            }
+            .media-card-content h3 {
+                font-size: 1.3rem;
+            }
+            .media-card-content p {
+                font-size: 1rem;
+            }
+            #chatButton, #backToTopBtn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+            }
+            #chatButton {
+                right: 20px;
+            }
+            #backToTopBtn {
+                left: 20px;
+            }
+            #chatPopup {
+                bottom: 20px;
+                right: 10px;
+                width: calc(100% - 20px);
+                height: 380px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Media</h1>
+        </div>
+    </header>
+
+    <div class="media-container">
+        <div class="media-card">
+            <iframe src="https://www.youtube.com/embed/W9YhXvER_hU" allowfullscreen></iframe>
+            <div class="media-card-content">
+                <h3>Introductory Meeting</h3>
+                <p>
+                    Please help people with financial needs obtain medications by joining Gift Cure!
+                </p>
+                <ul>
+                    <li>Volunteer: Earn volunteer hours or just volunteer for fun in the role you like!</li>
+                    <li>Donate: Donate money for people in need of medications!</li>
+                    <li>Receive: If you or a person you know needs medications, apply to receive them!</li>
+                </ul>
+                <p>Discord - discord.giftcure.org</p>
+            </div>
+        </div>
+
+        <!-- Add more media cards as needed -->
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button id="chatButton">
+        <img src="https://static.wixstatic.com/media/1c1a62_84ddee2229a94620b2659aa3ee74bc11~mv2.png" alt="Chat Icon">
+    </button>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup">
+        <div id="chatHeader">
+            Gift Cure AI Bot
+            <button id="chatClose">X</button>
+        </div>
+        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+        <img src="https://static.wixstatic.com/media/1c1a62_03467cfdca7245d9aed551c7e8d80d94~mv2.png" alt="Back to top" />
+    </button>
+
+    <script>
+        // Chat button functionality
+        var chatButton = document.getElementById('chatButton');
+        var chatPopup = document.getElementById('chatPopup');
+        var isOpen = false;
+
+        chatButton.addEventListener('click', function() {
+            if (!isOpen) {
+                // Open the chat popup
+                chatPopup.style.display = 'block';
+                chatButton.style.display = 'none'; // Hide the chat button
+                isOpen = true;
+            }
+        });
+
+        // Close chat popup when 'Close AI Bot' button is clicked
+        document.getElementById('chatClose').addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+            chatButton.style.display = 'block'; // Show the chat button
+            isOpen = false;
+        });
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            // Get the current scroll position
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Set the scroll interval
+            let scrollInterval = setInterval(function() {
+                // Calculate the new scroll position (smooth scrolling)
+                currentScroll -= 20; // Adjusted for smoother scrolling
+                
+                // Scroll to the new position
+                window.scrollTo(0, currentScroll);
+
+                // Stop the interval when reaching the top
+                if (currentScroll <= 0) {
+                    clearInterval(scrollInterval);
+                }
+            }, 10); // Adjust the interval for scrolling smoothness
+        }
+    </script>
+</body>
+</html>
