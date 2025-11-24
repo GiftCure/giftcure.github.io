@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- ===== TOP NAV BAR ===== -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <li><a href="#">Legal</a>
+      <ul class="dropdown">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== BOTTOM NAV BAR ===== -->
+<nav class="bottom-nav">
+  <ul>
+    <li><a href="index.html">Home</a>
+    <li><a href="get-started.html">Get Started</a>
+      <ul class="dropdown">
+        <li><a href="get-medicine.html">Get Medicine</a></li>
+        <li><a href="donate-medicine.html">Donate Medicine</a></li>
+        <li><a href="customer-feedback.html">Customer Feedback</a></li>
+      </ul>
+    </li>
+
+    <li><a href="join-volunteer.html">Join Us / Volunteer</a></li>
+
+    <li><a href="#">Outreach</a>
+      <ul class="dropdown">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== WHITE THEME CSS ===== -->
+<style>
+  /* Remove any stray page spacing */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  nav {
+    background: #ffffff;
+    padding: 0.4rem 1.2rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .bottom-nav {
+    border-top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 0.4rem;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background: #f5f5f5;
+  }
+
+  /* Dropdown styling */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown a {
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+  }
+
+  .dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Hover activation */
+  nav ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>    
+<style>
+        :root {
+            --primary-color: #3AAFA9;
+            --secondary-color: #2B7A78;
+            --accent-color: #17252A;
+            --light-color: #DEF2F1;
+            --white-color: #FEFFFF;
+            --gradient-primary: linear-gradient(135deg, #3AAFA9, #4FB0C6);
+            --gradient-secondary: linear-gradient(135deg, #2B7A78, #3D8EAF);
+            --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light-color);
+            color: var(--accent-color);
+            line-height: 1.6;
+        }
+        
+        .banner {
+            position: relative;
+            height: auto;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--gradient-primary);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .logo, .logo2, .logo3, .logo4, .logo5, .gif {
+            width: 270px;
+            height: auto;
+            z-index: 1;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .logo:hover, .logo2:hover, .logo3:hover, .logo4:hover, .logo5:hover, .gif:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .header {
+            background: var(--gradient-secondary);
+            text-align: center;
+            padding: 30px 0;
+            color: var(--white-color);
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+        
+        .privacy-policy {
+            padding: 30px;
+            background-color: var(--white-color);
+            max-width: 1000px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: var(--box-shadow);
+            overflow-y: auto;
+            max-height: 1100px;
+        }
+        
+        .container {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .embedded-blog {
+            width: 100%;
+            height: 90vh;
+            border: none;
+            border-radius: 0;
+        }
+
+        #chatButton, #backToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        #chatButton {
+            right: 30px;
+        }
+
+        #chatButton img, #backToTopBtn img {
+            width: 30px;
+            height: 30px;
+            transition: var(--transition);
+            filter: brightness(0) invert(1);
+        }
+
+        #chatButton:hover, #backToTopBtn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        #chatPopup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: var(--white-color);
+            border-radius: 15px;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: var(--transition);
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+
+        #chatFrame {
+            width: 100%;
+            height: calc(100% - 60px);
+            margin-top: 60px;
+            border: none;
+        }
+
+        #chatHeader {
+            background: var(--gradient-secondary);
+            color: var(--white-color);
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #chatClose {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white-color);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        #chatClose:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+
+        #backToTopBtn {
+            left: 30px;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 992px) {
+            .header {
+                font-size: 32px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .logo, .logo2, .logo3, .logo4, .logo5, .gif {
+                width: 100%;
+                max-width: 200px;
+            }
+            .header {
+                font-size: 28px;
+                padding: 20px 0;
+            }
+            .privacy-policy {
+                padding: 20px;
+                max-height: 700px;
+                margin: 20px;
+            }
+            .row {
+                flex-wrap: wrap;
+            }
+            #chatPopup {
+                width: 320px;
+                height: 450px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo, .logo2, .logo3, .logo4, .logo5, .gif {
+                max-width: 130px;
+            }
+            .header {
+                font-size: 24px;
+                padding: 15px 0;
+            }
+            .privacy-policy {
+                padding: 15px;
+                max-height: 500px;
+                margin: 15px;
+            }
+            #chatButton, #backToTopBtn {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+            }
+            #chatButton img, #backToTopBtn img {
+                width: 25px;
+                height: 25px;
+            }
+            #chatPopup {
+                width: 280px;
+                height: 400px;
+                bottom: 15px;
+                right: 15px;
+            }
+            #chatHeader {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        News
+    </div>
+    <div class="container">
+        <iframe class="embedded-blog" src="https://giftcure-news.blogspot.com/" frameborder="0"></iframe>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button id="chatButton">
+        <img src="https://static.wixstatic.com/media/1c1a62_84ddee2229a94620b2659aa3ee74bc11~mv2.png" alt="Chat Icon">
+    </button>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup">
+        <div id="chatHeader">
+            Gift Cure AI Bot
+            <button id="chatClose">X</button>
+        </div>
+        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
+    </div>
+
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+        <img src="https://static.wixstatic.com/media/1c1a62_03467cfdca7245d9aed551c7e8d80d94~mv2.png" alt="Back to top" />
+    </button>
+
+    <script>
+        var chatButton = document.getElementById('chatButton');
+        var chatPopup = document.getElementById('chatPopup');
+        var isOpen = false;
+
+        chatButton.addEventListener('click', function() {
+            if (!isOpen) {
+                // Open the chat popup
+                chatPopup.style.display = 'block';
+                chatButton.style.display = 'none'; // Hide the chat button
+                isOpen = true;
+            }
+        });
+
+        // Close chat popup when 'Close AI Bot' button is clicked
+        document.getElementById('chatClose').addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+            chatButton.style.display = 'block'; // Show the chat button
+            isOpen = false;
+        });
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            // Get the current scroll position
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Set the scroll interval
+            let scrollInterval = setInterval(function() {
+                // Calculate the new scroll position (smooth scrolling)
+                currentScroll -= 15; // Adjusted for smoother scrolling
+                
+                // Scroll to the new position
+                window.scrollTo(0, currentScroll);
+
+                // Stop the interval when reaching the top
+                if (currentScroll <= 0) {
+                    clearInterval(scrollInterval);
+                }
+            }, 10); // Adjusted for smoother scrolling
+        }
+    </script>
+</body>
+</html>
