@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- ===== TOP NAV BAR ===== -->
+<nav class="top-nav">
+  <ul>
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+    <li><a href="#">Legal</a>
+      <ul class="dropdown">
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms-of-service.html">Terms of Service</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== BOTTOM NAV BAR ===== -->
+<nav class="bottom-nav">
+  <ul>
+    <li><a href="index.html">Home</a>
+    <li><a href="get-started.html">Get Started</a>
+      <ul class="dropdown">
+        <li><a href="get-medicine.html">Get Medicine</a></li>
+        <li><a href="donate-medicine.html">Donate Medicine</a></li>
+        <li><a href="customer-feedback.html">Customer Feedback</a></li>
+      </ul>
+    </li>
+
+    <li><a href="join-volunteer.html">Join Us / Volunteer</a></li>
+
+    <li><a href="#">Outreach</a>
+      <ul class="dropdown">
+        <li><a href="newsletter.html">Newsletter</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- ===== WHITE THEME CSS ===== -->
+<style>
+  /* Remove any stray page spacing */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  nav {
+    background: #ffffff;
+    padding: 0.4rem 1.2rem;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    position: relative;
+  }
+
+  .bottom-nav {
+    border-top: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    position: relative;
+  }
+
+  nav a {
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 0.4rem;
+    display: block;
+    font-weight: 500;
+    transition: 0.25s ease;
+    border-radius: 6px;
+  }
+
+  nav a:hover {
+    background: #f5f5f5;
+  }
+
+  /* Dropdown styling */
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 200;
+    padding: 0.4rem 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown a {
+    color: #000;
+    padding: 0.6rem 1rem;
+    border-radius: 0;
+    transition: 0.2s ease;
+  }
+
+  .dropdown a:hover {
+    background: #f0f0f0;
+  }
+
+  /* Hover activation */
+  nav ul li:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>    
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-blue: #3498db;
+            --primary-green: #2ecc71;
+            --light-blue: #a9d0f5;
+            --light-green: #a9f5c9;
+            --dark-blue: #1a5276;
+            --dark-green: #196f3d;
+            --gradient-bg: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+            --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background-image: var(--gradient-bg);
+            text-align: center;
+            padding: 100px 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://static.wixstatic.com/media/1c1a62_27ad9ff10cf445f4b30c5792eaccf1a1~mv2.webp');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-title {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s;
+            text-transform: uppercase;
+        }
+        
+        .header-subtitle {
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0.9;
+            animation: fadeInUp 1s;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .event-section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+        
+        .event-box {
+            width: 30%;
+            padding: 25px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid transparent;
+        }
+        
+        .event-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at top right, rgba(255, 255, 255, 0.8), transparent);
+            opacity: 0.5;
+            z-index: 0;
+        }
+        
+        .event-box:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .event-box .content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .event-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .event-date {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #7f8c8d;
+        }
+        
+        .event-date i {
+            margin-right: 8px;
+            color: var(--primary-blue);
+        }
+        
+        .event-description {
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: #34495e;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .watch-live {
+            background-image: var(--gradient-bg);
+            color: white;
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .watch-live:hover {
+            box-shadow: 0 7px 20px rgba(52, 152, 219, 0.6);
+            transform: translateY(-3px);
+        }
+        
+        .add-to-calendar {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .calendar-btn {
+            display: flex;
+            align-items: center;
+            color: var(--dark-blue);
+            font-weight: 500;
+            font-size: 13px;
+            margin: 5px;
+            transition: var(--transition);
+        }
+        
+        .calendar-btn i {
+            margin-right: 5px;
+            font-size: 16px;
+        }
+        
+        .calendar-btn:hover {
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+        
+        /* Style for each event box */
+        .event-box.thyroid {
+            border-top: 4px solid #3498db;
+        }
+        
+        .event-box.leprosy {
+            border-top: 4px solid #2ecc71;
+        }
+        
+        .event-box.tropical {
+            border-top: 4px solid #1abc9c;
+        }
+        
+        #chatButton, #backToTopBtn {
+            position: fixed;
+            bottom: 25px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-image: var(--gradient-bg);
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(46, 204, 113, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(46, 204, 113, 0);
+            }
+        }
+        
+        #chatButton {
+            right: 25px;
+        }
+        
+        #chatButton img, #backToTopBtn img {
+            width: 30px;
+            height: 30px;
+            filter: brightness(0) invert(1);
+            transition: var(--transition);
+        }
+        
+        #chatButton:hover, #backToTopBtn:hover {
+            transform: scale(1.1);
+        }
+        
+        #chatPopup {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 350px;
+            height: 450px;
+            background-color: white;
+            border-radius: 15px;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: slideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        #chatFrame {
+            width: 100%;
+            height: calc(100% - 60px);
+            margin-top: 60px;
+            border: none;
+        }
+        
+        #chatHeader {
+            background-image: var(--gradient-bg);
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #chatClose {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+        
+        #chatClose:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: rotate(90deg);
+        }
+        
+        #backToTopBtn {
+            left: 25px;
+            display: none;
+        }
+        
+        #backToTopBtn:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        /* Media Queries for Responsive Design */
+        @media (max-width: 992px) {
+            .event-box {
+                width: 45%;
+            }
+            
+            .header-title {
+                font-size: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 32px;
+            }
+            
+            .header-subtitle {
+                font-size: 18px;
+            }
+            
+            .event-section {
+                padding: 40px 20px;
+            }
+            
+            .event-box {
+                width: 100%;
+                max-width: 450px;
+                margin-bottom: 20px;
+            }
+            
+            #chatPopup {
+                width: 300px;
+                height: 400px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 60px 0;
+            }
+            
+            .header-title {
+                font-size: 28px;
+            }
+            
+            .header-subtitle {
+                font-size: 16px;
+            }
+            
+            .event-title {
+                font-size: 20px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .calendar-btn {
+                font-size: 12px;
+            }
+            
+            #chatPopup {
+                width: calc(100% - 40px);
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="header-title">Health Events</div>
+            <div class="header-subtitle">Join our awareness programs</div>
+        </div>
+    </div>
+
+    <!-- Event Section -->
+    <div class="event-section">
+        <!-- Event Box for Thyroid Awareness Month -->
+        <div class="event-box thyroid">
+            <div class="content">
+                <div class="event-title">Thyroid Awareness Month</div>
+                <div class="event-date"><i class="far fa-calendar-alt"></i> Jan 3 - 3:30pm</div>
+                <div class="event-description">Join us for a discussion on common thyroid-related diseases and how to keep your thyroid healthy.</div>
+                <a href="https://youtube.com/@giftcure?si=Qq5ahVOQKq6YEDM0" class="btn watch-live" target="_blank">
+                    <i class="fab fa-youtube"></i> Watch it Live
+                </a>
+                <div class="add-to-calendar">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250103T233000Z%2F20250104T000000Z&details=Join%20us%20for%20a%20discussion%20on%20common%20thyroid-related%20diseases%20and%20how%20to%20keep%20your%20thyroid%20healthy.&location=&text=Thyroid%20Awareness%20Month" class="calendar-btn" target="_blank">
+                        <i class="fab fa-google"></i> Google
+                    </a>
+                    <a href="https://calendar.yahoo.com/?desc=Join%20us%20for%20a%20discussion%20on%20common%20thyroid-related%20diseases%20and%20how%20to%20keep%20your%20thyroid%20healthy.&dur=false&et=20250104T000000Z&in_loc=&st=20250103T233000Z&title=Thyroid%20Awareness%20Month&v=60" class="calendar-btn" target="_blank">
+                        <i class="fab fa-yahoo"></i> Yahoo
+                    </a>
+                    <a href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Join%20us%20for%20a%20discussion%20on%20common%20thyroid-related%20diseases%20and%20how%20to%20keep%20your%20thyroid%20healthy.&enddt=2025-01-03T16%3A00%3A00&location=&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2025-01-03T15%3A30%3A00&subject=Thyroid%20Awareness%20Month" class="calendar-btn" target="_blank">
+                        <i class="far fa-envelope"></i> Outlook
+                    </a>
+                    <a href="https://stripo.email/storage/ics/2024/12/ics_thyroid-awareness-month-2024-12-27-230343.ics" class="calendar-btn" target="_blank">
+                        <i class="fab fa-apple"></i> Apple
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Box for World Leprosy Day -->
+        <div class="event-box leprosy">
+            <div class="content">
+                <div class="event-title">World Leprosy Day</div>
+                <div class="event-date"><i class="far fa-calendar-alt"></i> Jan 26 - 3:30pm</div>
+                <div class="event-description">Learn about Leprosy and its impact on communities worldwide. Join our health experts for this important discussion.</div>
+                <a href="https://youtube.com/@giftcure?si=Qq5ahVOQKq6YEDM0" class="btn watch-live" target="_blank">
+                    <i class="fab fa-youtube"></i> Watch it Live
+                </a>
+                <div class="add-to-calendar">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250126T233000Z%2F20250127T000000Z&details=Join%20us%20for%20a%20discussion%20on%20Leprosy.&location=&text=World%20Leprosy%20Day" class="calendar-btn" target="_blank">
+                        <i class="fab fa-google"></i> Google
+                    </a>
+                    <a href="https://calendar.yahoo.com/?desc=Join%20us%20for%20a%20discussion%20on%20Leprosy.&dur=false&et=20250127T000000Z&in_loc=&st=20250126T233000Z&title=World%20Leprosy%20Day&v=60" class="calendar-btn" target="_blank">
+                        <i class="fab fa-yahoo"></i> Yahoo
+                    </a>
+                    <a href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Join%20us%20for%20a%20discussion%20on%20Leprosy.&enddt=2025-01-26T16%3A00%3A00&location=&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2025-01-26T15%3A30%3A00&subject=World%20Leprosy%20Day" class="calendar-btn" target="_blank">
+                        <i class="far fa-envelope"></i> Outlook
+                    </a>
+                    <a href="https://stripo.email/storage/ics/2024/12/ics_world-leprosy-day-2024-12-27-230815.ics" class="calendar-btn" target="_blank">
+                        <i class="fab fa-apple"></i> Apple
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Box for World Neglected Tropical Diseases Day -->
+        <div class="event-box tropical">
+            <div class="content">
+                <div class="event-title">World Neglected Tropical Diseases Day</div>
+                <div class="event-date"><i class="far fa-calendar-alt"></i> Jan 30 - 6:00pm</div>
+                <div class="event-description">Explore issues related to tropical diseases and learn how you can help in the global effort to eradicate them.</div>
+                <a href="https://youtube.com/@giftcure?si=Qq5ahVOQKq6YEDM0" class="btn watch-live" target="_blank">
+                    <i class="fab fa-youtube"></i> Watch it Live
+                </a>
+                <div class="add-to-calendar">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20250131T020000Z%2F20250131T023000Z&details=Explore%20issues%20related%20to%20tropical%20diseases.&location=&text=World%20Neglected%20Tropical%20Diseases%20Day" class="calendar-btn" target="_blank">
+                        <i class="fab fa-google"></i> Google
+                    </a>
+                    <a href="https://calendar.yahoo.com/?desc=Explore%20issues%20related%20to%20tropical%20diseases.&dur=false&et=20250131T023000Z&in_loc=&st=20250131T020000Z&title=World%20Neglected%20Tropical%20Diseases%20Day&v=60" class="calendar-btn" target="_blank">
+                        <i class="fab fa-yahoo"></i> Yahoo
+                    </a>
+                    <a href="https://outlook.live.com/calendar/0/action/compose?allday=false&body=Explore%20issues%20related%20to%20tropical%20diseases.&enddt=2025-01-30T18%3A30%3A00&location=&path=%2Fcalendar%2Faction%2Fcompose&rru=addevent&startdt=2025-01-30T18%3A00%3A00&subject=World%20Neglected%20Tropical%20Diseases%20Day" class="calendar-btn" target="_blank">
+                        <i class="far fa-envelope"></i> Outlook
+                    </a>
+                    <a href="https://stripo.email/storage/ics/2024/12/ics_world-neglected-tropical-diseases-day-2024-12-27-231151.ics" class="calendar-btn" target="_blank">
+                        <i class="fab fa-apple"></i> Apple
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Chat Button -->
+    <button id="chatButton">
+        <img src="https://static.wixstatic.com/media/1c1a62_84ddee2229a94620b2659aa3ee74bc11~mv2.png" alt="Chat Icon">
+    </button>
+
+    <!-- Chat Popup -->
+    <div id="chatPopup">
+        <div id="chatHeader">
+            Gift Cure AI Bot
+            <button id="chatClose">×</button>
+        </div>
+        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+        <img src="https://static.wixstatic.com/media/1c1a62_03467cfdca7245d9aed551c7e8d80d94~mv2.png" alt="Back to top" />
+    </button>
+
+    <script>
+        var chatButton = document.getElementById('chatButton');
+        var chatPopup = document.getElementById('chatPopup');
+        var isOpen = false;
+
+        chatButton.addEventListener('click', function() {
+            if (!isOpen) {
+                // Open the chat popup
+                chatPopup.style.display = 'block';
+                chatButton.style.display = 'none'; // Hide the chat button
+                isOpen = true;
+            }
+        });
+
+        // Close chat popup when 'Close AI Bot' button is clicked
+        document.getElementById('chatClose').addEventListener('click', function() {
+            chatPopup.style.display = 'none';
+            chatButton.style.display = 'block'; // Show the chat button
+            isOpen = false;
+        });
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            // Get the current scroll position
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Set the scroll interval
+            let scrollInterval = setInterval(function() {
+                // Calculate the new scroll position (smooth scrolling)
+                currentScroll -= 10; // Adjust the value for scrolling speed
+                
+                // Scroll to the new position
+                window.scrollTo(0, currentScroll);
+
+                // Stop the interval when reaching the top
+                if (currentScroll <= 0) {
+                    clearInterval(scrollInterval);
+                }
+            }, 10); // Adjust the interval for scrolling smoothness
+        }
+    </script>
+</body>
+</html>
