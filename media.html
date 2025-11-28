@@ -736,47 +736,12 @@
         <!-- Add more media cards as needed -->
     </div>
 
-    <!-- Floating Chat Button -->
-    <button id="chatButton">
-        <img src="https://static.wixstatic.com/media/1c1a62_84ddee2229a94620b2659aa3ee74bc11~mv2.png" alt="Chat Icon">
-    </button>
-
-    <!-- Chat Popup -->
-    <div id="chatPopup">
-        <div id="chatHeader">
-            Gift Cure AI Bot
-            <button id="chatClose">X</button>
-        </div>
-        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
-    </div>
-
     <!-- Back to Top Button -->
     <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
         <img src="https://static.wixstatic.com/media/1c1a62_03467cfdca7245d9aed551c7e8d80d94~mv2.png" alt="Back to top" />
     </button>
 
     <script>
-        // Chat button functionality
-        var chatButton = document.getElementById('chatButton');
-        var chatPopup = document.getElementById('chatPopup');
-        var isOpen = false;
-
-        chatButton.addEventListener('click', function() {
-            if (!isOpen) {
-                // Open the chat popup
-                chatPopup.style.display = 'block';
-                chatButton.style.display = 'none'; // Hide the chat button
-                isOpen = true;
-            }
-        });
-
-        // Close chat popup when 'Close AI Bot' button is clicked
-        document.getElementById('chatClose').addEventListener('click', function() {
-            chatPopup.style.display = 'none';
-            chatButton.style.display = 'block'; // Show the chat button
-            isOpen = false;
-        });
-
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {scrollFunction()};
 
