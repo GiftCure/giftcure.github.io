@@ -802,20 +802,6 @@
         </section>
     </div>
 
-    <!-- Floating Chat Button -->
-    <button id="chatButton">
-        <i class="fas fa-comment-dots" style="font-size: 24px; color: white;"></i>
-    </button>
-
-    <!-- Chat Popup -->
-    <div id="chatPopup">
-        <div id="chatHeader">
-            Gift Cure AI Assistant
-            <button id="chatClose">✕</button>
-        </div>
-        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
-    </div>
-
     <!-- Back to Top Button -->
     <button id="backToTopBtn" title="Go to top">
         <i class="fas fa-arrow-up" style="font-size: 20px; color: white;"></i>
@@ -825,23 +811,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     
     <script>
-        var chatButton = document.getElementById('chatButton');
-        var chatPopup = document.getElementById('chatPopup');
-        var isOpen = false;
-
-        chatButton.addEventListener('click', function() {
-            if (!isOpen) {
-                chatPopup.style.display = 'block';
-                chatButton.style.display = 'none';
-                isOpen = true;
-            }
-        });
-
-        document.getElementById('chatClose').addEventListener('click', function() {
-            chatPopup.style.display = 'none';
-            chatButton.style.display = 'flex';
-            isOpen = false;
-        });
 
         window.onscroll = function() {scrollFunction()};
 
