@@ -773,20 +773,6 @@
         </div>
     </div>
     
-    <!-- Floating Chat Button -->
-    <button id="chatButton">
-        <img src="https://img.icons8.com/ios/50/ffffff/chat--v1.png" alt="Chat Icon">
-    </button>
-
-    <!-- Chat Popup -->
-    <div id="chatPopup">
-        <div id="chatHeader">
-            Gift Cure AI Bot
-            <button id="chatClose">×</button>
-        </div>
-        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
-    </div>
-
     <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
         <img src="https://img.icons8.com/ios/50/ffffff/up--v1.png" alt="Back to top" />
     </button>
@@ -802,23 +788,6 @@
             });
         });
         
-        var chatButton = document.getElementById('chatButton');
-        var chatPopup = document.getElementById('chatPopup');
-        var isOpen = false;
-        
-        chatButton.addEventListener('click', function() {
-            if (!isOpen) {
-                chatPopup.style.display = 'block';
-                chatButton.style.display = 'none';
-                isOpen = true;
-            }
-        });
-        
-        document.getElementById('chatClose').addEventListener('click', function() {
-            chatPopup.style.display = 'none';
-            chatButton.style.display = 'block';
-            isOpen = false;
-        });
         
         window.onscroll = function() {scrollFunction()};
         
