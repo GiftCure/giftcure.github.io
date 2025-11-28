@@ -630,21 +630,6 @@
         </div>
     </div>
 
-    <!-- Floating Chat Button -->
-    <button id="chatButton">
-        <i class="fas fa-comments"></i>
-    </button>
-
-    <!-- Chat Popup -->
-    <div id="chatPopup">
-        <div id="chatHeader">
-            Gift Cure AI Bot
-            <button id="chatClose">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
-    </div>
 
     <!-- Back to Top Button -->
     <button id="backToTopBtn" title="Go to top">
@@ -652,23 +637,6 @@
     </button>
 
     <script>
-        var chatButton = document.getElementById('chatButton');
-        var chatPopup = document.getElementById('chatPopup');
-        var isOpen = false;
-
-        chatButton.addEventListener('click', function() {
-            if (!isOpen) {
-                chatPopup.style.display = 'block';
-                chatButton.style.display = 'none';
-                isOpen = true;
-            }
-        });
-
-        document.getElementById('chatClose').addEventListener('click', function() {
-            chatPopup.style.display = 'none';
-            chatButton.style.display = 'block';
-            isOpen = false;
-        });
 
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {scrollFunction()};
