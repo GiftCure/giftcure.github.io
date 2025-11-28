@@ -615,19 +615,6 @@
         </div>
     </div>
     
-    <!-- Floating Chat Button -->
-    <button id="chatButton">
-        <img src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/collection/components/icon/svg/chatbubble-ellipses-outline.svg" alt="Chat Icon">
-    </button>
-
-    <!-- Chat Popup -->
-    <div id="chatPopup">
-        <div id="chatHeader">
-            Gift Cure AI Assistant
-            <button id="chatClose">✕</button>
-        </div>
-        <iframe id="chatFrame" src="https://oneai.com/~giftcure" frameborder="0"></iframe>
-    </div>
 
     <!-- Back to Top Button -->
     <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
@@ -664,28 +651,7 @@
             }
         }
 
-        // Chat button functionality
-        var chatButton = document.getElementById('chatButton');
-        var chatPopup = document.getElementById('chatPopup');
-        var isOpen = false;
-
-        chatButton.addEventListener('click', function() {
-            if (!isOpen) {
-                // Open the chat popup
-                chatPopup.style.display = 'block';
-                chatButton.style.display = 'none'; // Hide the chat button
-                isOpen = true;
-            }
-        });
-
-        // Close chat popup when 'Close' button is clicked
-        document.getElementById('chatClose').addEventListener('click', function() {
-            chatPopup.style.display = 'none';
-            chatButton.style.display = 'flex'; // Show the chat button
-            isOpen = false;
-        });
-
-        // Back to top button functionality
+   // Back to top button functionality
         window.onscroll = function() {scrollFunction()};
 
         function scrollFunction() {
